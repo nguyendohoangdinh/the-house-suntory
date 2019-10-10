@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The house suntory</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="./css/owl.carousel.min.css" rel="stylesheet">
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="./css/YouTubePopUp.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
+    <link href="./css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/curator.css"/>
+    <style>
+        @media all and (-ms-high-contrast: none) {
+            .footer-top .footer-topmenu ul li {
+                padding: 2px 0 !important;
+                line-height: 0 !important;
+            }
+
+            /* IE10 */
+            .footer-top .footer-topmenu ul li a {
+                line-height: 12px;
+            }
+
+            .navbar#nav-top .navbar-nav li {
+                margin: 0 20px;
+            }
+
+            #slideshow-home .icon-slider.right {
+                right: 17px;
+            }
+
+            #nav-top.navbar .navbar-nav li a.desktop-logo img {
+                max-height: 100%;
+            }
+
+            .product-page .masthead-slider .carousel-control.right {
+                right: 17px;
+            }
+
+            .product-sku-page .owl-controls .flipper-next {
+                right: 17px;
+            }
+
+            .best-enjoyed div.sun-btn-flipper.flipper-next {
+                right: 17px;
+            }
+
+            *::-ms-backdrop, .footer-top .footer-topmenu ul li {
+                padding: 2px 0 !important;
+                line-height: 0 !important;
+            }
+
+            /* IE11 */
+            *::-ms-backdrop, .navbar#nav-top .navbar-nav li {
+                margin: 0 20px;
+            }
+
+            *::-ms-backdrop, #slideshow-home .icon-slider.right {
+                right: 17px;
+            }
+
+            *::-ms-backdrop, #nav-top.navbar .navbar-nav li a.desktop-logo img {
+                max-height: 100%;
+            }
+        }
+
+        @-moz-document url-prefix() {
+            .footer-top .footer-topmenu ul li {
+                padding: 1px 0;
+            }
+            .footer-top .footer-topmenu ul li a {
+                line-height: 12px;
+            }
+            #nav-top.navbar .navbar-nav li a.desktop-logo img {
+                min-width: 151px;
+            }
+        }
+
+    </style>
+    <!-- jQuery -->
+    <script src="./js/custom.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.mobile.custom.min.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.bcSwipe.min.js"></script>
+    <script src="./js/jquery.bootstrap.wizard.min.js"></script>
+    <script src="./js/bootstrap.youtubepopup.min.js"></script>
+    <script src="./js/select.js"></script>
+    <script src="./js/jquery.visible.min.js"></script>
+    <script src="./js/YouTubePopUp.jquery.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/instafeed.min.js"></script>
+    <script src="./js/masthead-slider.js"></script>
+
+    <script src="./js/images-processing.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSh2ZF9Mjxt1Y5k1okDDBnzJ8Uv7PcQZk&libraries=places"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!-- <script src="https://www.geoplugin.net/javascript.gp" type="text/javascript"></script> -->
+</head>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top global-navbar" role="navigation" id="nav-top">
+    <div class="nav-first content-container">
+        <ul class="nav navbar-nav navbar-nav-global nav-left">
+            <li class="active menu-col-tabled head-m">
+                <a class="link menu-tabled-heading" href="/en/global/"><span>House Of Suntory</span></a>
+            </li>
+
+            <li class=" menu-col-tabled head-m nav-left">
+                <a class="nav-left" href="/en/global"><span>Suntory Whisky</span></a>
+            </li>
+
+            <li class=" menu-col-tabled head-m nav-left">
+                <a class="nav-left" href="https://rokugin.suntory.com/en/global"><span>Roku<sup>®</sup>Gin</span></a>
+            </li>
+
+            <li class=" menu-col-tabled head-m nav-left">
+                <a class="nav-left"
+                   href="https://hakuvodka.suntory.com/en/global"><span>Haku<sup>®</sup> Vodka</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-second">
+        <div class="container-header">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div id="sun_navbar_header" class="navbar-header">
+                <button type="button" id="sun_menu_button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-sm visible-xs" href="https://house.suntory.com/" title="The house">
+                    <img src="./img/logo-the-house.svg" alt="Logo " class="logo-center">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="menu-collapse">
+                <!-- <div class="collapse navbar-collapse navbar-ex1-collapse"> -->
+                <ul class="nav navbar-nav navbar-nav-global">
+                    <li class="menu-col-tabled head-m">
+                        <a class="link menu-tabled-heading" href="/en/global/the-house"><span>THE HOUSE</span></a>
+                    </li>
+
+                    <li class="active menu-col-tabled head-m toggle-menu"
+                        data-toggle="collapse" data-target="#sub-distilleries" id="menu-distilleries">
+                        <a href="/en/global/products" class="menu-tabled-heading"><span>Product</span></a>
+                    </li>
+                    <li class="hidden-md hidden-sm hidden-xs li-logo">
+                        <a href="/en/global/" title="The house" class="desktop-logo">
+                            <img src="./img/logo-the-house.svg" alt="Logo ">
+                        </a>
+                    </li>
+
+                    <li class=" menu-col-tabled head-m nav-left">
+                        <a class="nav-left"
+                           href="https://whisky.suntory.com/en/global/distilleries"><span>distilleries</span></a>
+                    </li>
+
+                    <li class=" menu-col-tabled head-m nav-left">
+                        <a class="nav-left" href="/en/global/faq"><span>faq</span></a>
+                    </li>
+
+                    <li class=" menu-col-tabled head-m nav-left">
+                        <a class="nav-left" href="/en/global/contact-us"><span>contact</span></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-nav-global nav-first-mb">
+                    <li class="active menu-col-tabled head-m">
+                        <a class="link menu-tabled-heading" href="/en/global/"><span>House Of Suntory</span></a>
+                    </li>
+
+                    <li class=" menu-col-tabled head-m nav-left">
+                        <a class="nav-left" href="https://whisky.suntory.com/en/global"><span>Suntory Whisky</span></a>
+                    </li>
+
+                    <li class=" menu-col-tabled head-m nav-left">
+                        <a class="nav-left"
+                           href="https://rokugin.suntory.com/en/global"><span>Roku<sup>®</sup>Gin</span></a>
+                    </li>
+
+                    <li class=" menu-col-tabled head-m nav-left">
+                        <a class="nav-left" href="https://hakuvodka.suntory.com/en/global"><span>Haku<sup>®</sup> Vodka</span></a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+        <div class="marks"></div>
+    </div>
+
+</nav>
+<section class="content-container product-page">
+    <div id="masthead-slider" class="carousel carousel-fade slide masthead-slider" data-ride="carousel" data-interval="5000" data-duration="1000">
+        <ol class="carousel-indicators">
+            <li data-target="#masthead-slider" data-slide-to="0" class=""></li>
+            <li data-target="#masthead-slider" data-slide-to="1" class=""></li>
+            <li data-target="#masthead-slider" data-slide-to="2" class="active"></li>
+            <li data-target="#masthead-slider" data-slide-to="3" class=""></li>
+            <li data-target="#masthead-slider" data-slide-to="4" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item" style="transition-duration: 1000ms;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-0-global.png" class="img-rp-center hidden-xs banner-520" style="width: 100%; margin-left: 0px; max-width: none; margin-top: -41.26px;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-0-mobile-global.png" class="visible-xs img-mobile">
+            </div>
+            <div class="item" style="transition-duration: 1000ms;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-1-global.png" class="img-rp-center hidden-xs banner-520" style="width: 100%; margin-left: 0px; max-width: none; margin-top: -41.26px;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-1-mobile-global.png" class="visible-xs img-mobile">
+            </div>
+            <div class="item active" style="transition-duration: 1000ms;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-2-global.png" class="img-rp-center hidden-xs banner-520" style="width: 100%; margin-left: 0px; max-width: none; margin-top: -41.26px;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-2-mobile-global.png" class="visible-xs img-mobile">
+            </div>
+            <div class="item" style="transition-duration: 1000ms;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-3-global.png" class="img-rp-center hidden-xs banner-520" style="width: 100%; margin-left: 0px; max-width: none; margin-top: -41.26px;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-3-mobile-global.png" class="visible-xs img-mobile">
+            </div>
+            <div class="item" style="transition-duration: 1000ms;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-4-global.png" class="img-rp-center hidden-xs banner-520" style="width: 100%; margin-left: 0px; max-width: none; margin-top: -41.26px;">
+                <img alt="First slide" src="./img/product-yamazaki-cover-4-mobile-global.png" class="visible-xs img-mobile">
+            </div>
+        </div>
+        <a class="left carousel-control hidden-xs hidden-sm" href="#masthead-slider" data-slide="prev"><span class="icon-slider left"></span></a>
+        <a class="right carousel-control hidden-xs hidden-sm" href="#masthead-slider" data-slide="next"><span class="icon-slider right"></span></a>
+        <div class="bg-banner-top" id="banner-top-bg">
+            <table class="long-bg" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td class="bg-white"></td>
+                    <td class="hidden-xs long"></td>
+                    <td class="hidden hidden-lg hidden-sm visible-xs long-mb" cellspacing="0" cellpadding="0"></td>
+                    <td class="bg-white"></td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+    <script src="./js/masthead-slider.js"></script>
+    <!-- Suntony whisky -->
+    <div class="container text-center layout-container-top">
+        <h1 class="title">Yamazaki Whisky</h1>
+        <h4 class="title-2"> THE PIONEER OF JAPANESE WHISKY </h4>
+        <h3 class="title-desc desc-below"> Yamazaki Whisky is Suntory's flagship single malt whisky, from Japan’s first and oldest malt distillery, multi-layered with fruit and Mizunara aromas. </h3>
+        <div class="row row-text text-left">
+            <!-- 2 Collumn 2 content -->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-md-3 col-lg-3"></div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-right text"><p class="block-text-1">From Yamazaki was born the surprising, delicate yet profound experience of a Japanese single malt whisky.</p></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-left text"><p class="block-text-2">Spiritual and deep, made at Yamazaki Distillery, the soulplace of Japanese whisky,  its signature multi-layered taste is highly praised by whisky connoisseurs all over the world. Today, Suntory Single Malt Whisky Yamazaki Whisky is not only the No.1 single malt whisky in Japan, but is enjoyed in more than 35 countries.</p></div>
+                <div class="col-md-3 col-lg-3"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="hidden-xs">
+
+    <!-- Suntony whisky history -->
+    <div class="container text-header tab-product-yamazaki tab-product-p tab-style">
+        <div id="rootwizard">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <div class="inner">
+                            <ul class="nav nav-pills">
+                                <li id="the-range" class="active"><a draggable="false" href="#tab_product_yamazaki_1" data-toggle="tab">THE RANGE</a>
+                                </li><li id="yamazaki-mizunara"><a draggable="false" href="#tab_product_yamazaki_5" data-toggle="tab">THE MIZUNARA</a>
+                            </li><li id="the-distillery"><a draggable="false" href="#tab_product_yamazaki_2" data-toggle="tab">THE DISTILLERY</a>
+                            </li><li id="the-origin"><a draggable="false" href="#tab_product_yamazaki_3" data-toggle="tab">THE ORIGIN</a>
+                            </li><li id="awards"><a draggable="false" href="#tab_product_yamazaki_4" data-toggle="tab">AWARDS</a>
+                            </li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane tab-layout fade in active" id="tab_product_yamazaki_1">
+                    <h2 class="tab-title text-center title-tab no-desc">THE YAMAZAKI RANGE</h2>
+
+                    <!-- <div class="com-product-range thumb">
+                      <ul class="product-range-thumb row">
+                        <li class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                          <img src="./img/product-yamazaki-tab1-cover.png" class="img-responsive" alt="Image">
+                          <p>YAMAZAKI<br>DISTILLER’S RESERVE</p>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                          <img src="./img/product-yamazaki-tab2-cover.png" class="img-responsive" alt="Image">
+                          <p>YAMAZAKI<br> 12 YEARS OLD</p>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                          <img src="./img/product-yamazaki-tab2-cover.png" class="img-responsive" alt="Image">
+                          <p>YAMAZAKI<br> 18 YEARS OLD</p>
+                        </li>
+                        <li class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                          <img src="./img/product-yamazaki-tab2-cover.png" class="img-responsive" alt="Image">
+                          <p>YAMAZAKI<br> 25 YEARS OLD</p>
+                        </li>
+                      </ul>
+                    </div>
+                   -->
+                    <div class="com-product-range thumb hidden-xs layout-product">
+                        <ul class="product-range-thumb row">
+                            <li class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-center">
+                                <a href="/en/global/products/yamazaki/sku">
+                                    <img src="./img/product-yamazaki-tab1-cover.png" class="" alt="Image">
+                                </a>
+                                <p>YAMAZAKI<br>DISTILLER’S RESERVE</p>
+                            </li>
+                            <li class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-center">
+                                <a href="/en/global/products/yamazaki/sku">
+                                    <img src="./img/product-yamazaki-tab2-cover.png" class="" alt="Image">
+                                </a>
+                                <p>YAMAZAKI<br> 12 YEARS OLD</p>
+                            </li>
+                            <li class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-center">
+                                <a href="/en/global/products/yamazaki/sku">
+                                    <img src="./img/product-yamazaki-tab3-cover.png" class="" alt="Image">
+                                </a>
+                                <p>YAMAZAKI<br> 18 YEARS OLD</p>
+                            </li>
+                            <li class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-center">
+                                <a href="/en/global/products/yamazaki/sku">
+                                    <img src="./img/product-yamazaki-tab4-cover.png" class="" alt="Image">
+                                </a>
+                                <p>YAMAZAKI<br> 25 YEARS OLD</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row row-image com-product-range hidden-md hidden-lg hidden-sm layout-product1">
+                        <a href="/en/global/products/yamazaki/sku">
+                            <img src="./img/yamazaki_range_thumb_mobile_global.png" class="img-responsive full-width" alt="Image">
+                        </a>
+                    </div>
+
+
+
+                    <div class="row row-text text-left hidden-xs">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            <div class="col-md-6 col-lg-6 col-sm-6">
+                                <p class="text-heading ">Discover the Yamazaki Whisky product range from Japan’s first and oldest malt distillery</p>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                        </div>
+                        <!-- 1 Collumn 1 content -->
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <p class="text-center"></p>
+                            </div>
+                            <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-text text-left hidden-md hidden-lg hidden-sm">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <p class="text-center text-more-detail ">Discover the Yamazaki Whisky product range from Japan’s first and oldest malt distillery</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-link action-group has_content btn-open-link">
+                        <div class="col-md-12">
+                            <a class="sun-btn-lg " href="/en/global/products/yamazaki/sku">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <!-- image1
+                  content1
+
+                  image2
+                  image2 image3
+
+                  image2
+                  content2
+
+                  image3 -->
+
+                    <div id="myModals-w8shO2IqMmDoV0W7hVyE" class="view-mobile modal fade-scale myModals-w8shO2IqMmDoV0W7hVyE" role="dialog" aria-hidden="false">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="close-div">
+                                        <button type="button" class="btn btn-default close"></button>
+                                    </div>
+                                    <h2 class="sub-title text-center">THE YAMAZAKI RANGE</h2>
+
+                                    <div class="row-img">
+                                        <img src="./img/yamazaki_range_thumb_mobile_global.png" class="img-responsive first-img" alt="Image">
+
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div><p></p></div>
+
+                                            <div style="width: 100%; height: 32px;"></div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12 row-button">
+                                        <a class="sun-btn-lg " href="/en/global/products/yamazaki/sku">LEARN MORE</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade tab-layout " id="tab_product_yamazaki_2">
+                    <div class="layout-1col">
+                        <h2 class="tab-title text-center title-tab no-desc">yamazaki,  the distillery</h2>
+
+
+                        <div class="row-image  ">
+                            <a href="/en/global/distilleries/yamazaki">
+                                <img src="./img/yamazaki-distillery-1_mobile.png" class="img-responsive visible-xs" alt="Image">
+                                <img src="./img/yamazaki-distillery-1.png" class="img-responsive visible-md visible-lg  visible-sm" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="row row-text text-left hidden-xs">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <p class="text-heading ">Yamazaki Distillery, the Japan's first and oldest single malt distillery</p>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            </div>
+                            <!-- 1 Collumn 1 content -->
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                    <p class="text-center"></p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                            </div>
+                        </div>
+
+                        <div class="row row-text text-left hidden-md hidden-lg hidden-sm">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <p class="text-center text-more-detail ">Yamazaki Distillery, the Japan's first and oldest single malt distillery</p>
+                            </div>
+                        </div>
+
+                        <div class="row row-link action-group has_content btn-open-link">
+                            <div class="col-md-12">
+                                <a class="sun-btn-lg " href="/en/global/distilleries/yamazaki">LEARN MORE</a>
+                            </div>
+                        </div>
+                        <!-- image1
+                      content1
+
+                      image2
+                      image2 image3
+
+                      image2
+                      content2
+
+                      image3 -->
+
+                        <div id="myModals-Hr7KC4zlsb6oqNn8vEnF" class="view-mobile modal fade-scale myModals-Hr7KC4zlsb6oqNn8vEnF" role="dialog" aria-hidden="false">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="close-div">
+                                            <button type="button" class="btn btn-default close"></button>
+                                        </div>
+                                        <h2 class="sub-title text-center">yamazaki,  the distillery</h2>
+
+                                        <div class="row-img">
+                                            <img src="./img/yamazaki-distillery-1_mobile.png" class="img-responsive first-img visible-xs" style="width:100%;" alt="Image">
+                                            <img src="./img/yamazaki-distillery-1.png" class="img-responsive first-img  is-cropped hidden-xs" alt="Image">
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div><p></p></div>
+
+                                                <div style="width: 100%; height: 32px;"></div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-12 row-button">
+                                            <a class="sun-btn-lg " href="/en/global/distilleries/yamazaki">LEARN MORE</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade tab-layout  " id="tab_product_yamazaki_3">
+                    <h2 class="tab-title text-center title-tab no-desc">The Origin of Yamazaki</h2>
+                    <!-- 2 Collumn 2 Image -->
+                    <div class="layout-2col-2img ">
+                        <div class="row row-image ">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 row-image-item">
+                                <a href="/en/global/products/yamazaki/the-origin" class="hidden-xs">
+                                    <img src="./img/yamazaki_the_orgin_1.png" class="img-responsive" alt="Image">
+                                </a>
+                                <img src="./img/yamazaki_the_orgin_1_mobile.png" class="img-responsive visible-xs" alt="Image" data-toggle="modal" data-target="#myModals-qS4C9qR9V7JzyPtOXzpO">
+
+
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 row-image-item hidden-xs">
+                                <a href="/en/global/products/yamazaki/the-origin">
+                                    <img src="./img/yamazaki-distillery-2.png" class="img-responsive" alt="Image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-text text-left hidden-xs">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            <div class="col-md-6 col-lg-6 col-sm-6">
+                                <p class="text-heading got-content">Born in 1984, Suntory Single Malt Whisky Yamazaki was the next step for Japanese whisky.</p>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                        </div>
+                        <!-- 2 Collumn 2 content -->
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-block-1">
+                            <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-right text"><p>1984 marked 60 years since the first drop of whisky was made at the Yamazaki distillery. It was here that Keizo Saji pioneered the Japanese single malt whisky.</p></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-block-2">
+                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-left text"><p>The name "Yamazaki" speaks of the confidence and pride of the distillery's founding history. The calligraphy was done by Saji himself, and represents Suntory’s passion and celebrates the birth of the Japanese single malt.</p></div>
+                            <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                        </div>
+                    </div>
+
+                    <div class="row row-text text-left hidden-md hidden-lg hidden-sm">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <p class="text-center text-more-detail">The first Japanese Single malt was created from the pursuit of truly Japanese whisky at the Yamazaki distillery</p>
+                        </div>
+                    </div>
+
+                    <div class="row row-link action-group has_content btn-show-popup hidden-lg hidden-md hidden-sm">
+                        <div class="col-md-12">
+                            <a class="sun-btn-lg visible-xs-block hidden" data-toggle="modal" data-target="#myModals-qS4C9qR9V7JzyPtOXzpO">More Details</a>
+                        </div>
+                    </div>
+                    <div class="row row-link action-group has_content btn-open-link">
+                        <div class="col-md-12">
+                            <a class="sun-btn-lg " href="/en/global/products/yamazaki/the-origin" target="'_blank'">READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- image1
+                  content1
+
+                  image2
+                  image2 image3
+
+                  image2
+                  content2
+
+                  image3 -->
+
+                    <div id="myModals-qS4C9qR9V7JzyPtOXzpO" class="view-mobile modal fade-scale myModals-qS4C9qR9V7JzyPtOXzpO" role="dialog" aria-hidden="false">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="close-div">
+                                        <button type="button" class="btn btn-default close"></button>
+                                    </div>
+                                    <h2 class="sub-title text-center">The Origin of Yamazaki</h2>
+
+                                    <div class="row-img">
+                                        <img src="./img/yamazaki_the_orgin_1_mobile.png" class="img-responsive first-img visible-xs" style="width:100%;" alt="Image">
+                                        <img src="./img/yamazaki_the_orgin_1.png" class="img-responsive first-img hidden-xs" alt="Image">
+
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div><p>1984 marked 60 years since the first drop of whisky was made at the Yamazaki distillery. It was here that Keizo Saji pioneered the Japanese single malt whisky.</p></div>
+
+                                            <div class="row-img">
+                                                <img src="./img/yamazaki-distillery-2_mobile.png" class="img-responsive visible-xs" style="width:100%;" alt="Image">
+                                                <img src="./img/yamazaki-distillery-2.png" class=" hidden-xs" alt="Image">
+                                            </div>
+                                            <div><p>The name "Yamazaki" speaks of the confidence and pride of the distillery's founding history. The calligraphy was done by Saji himself, and represents Suntory’s passion and celebrates the birth of the Japanese single malt.</p></div>
+
+
+                                            <div style="width: 100%; height: 32px;"></div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-12 row-button">
+                                        <a class="sun-btn-lg " href="/en/global/products/yamazaki/the-origin">READ MORE</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade tab-layout " id="tab_product_yamazaki_4">
+                    <div class="layout-1col">
+                        <h2 class="tab-title text-center title-tab no-desc">Awards</h2>
+
+
+                        <div class="row-image no-mobile-content ">
+                            <a href="/en/global/awards">
+                                <img src="./img/yamazaki-award-1_mobile.png" class="img-responsive visible-xs" alt="Image">
+                                <img src="./img/yamazaki-award-1.png" class="img-responsive visible-md visible-lg  visible-sm" alt="Image">
+                            </a>
+                        </div>
+
+                        <div class="row row-text text-left hidden-xs">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <p class="text-heading ">View the accolades that Yamazaki Whisky has received over the years.</p>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            </div>
+                            <!-- 1 Collumn 1 content -->
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                    <p class="text-center"></p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                            </div>
+                        </div>
+
+                        <div class="row row-text text-left hidden-md hidden-lg hidden-sm">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <p class="text-center text-more-detail ">View the accolades that Yamazaki Whisky has received over the years.</p>
+                            </div>
+                        </div>
+
+                        <div class="row row-link action-group has_content btn-open-link">
+                            <div class="col-md-12">
+                                <a class="sun-btn-lg " href="/en/global/awards">LEARN MORE</a>
+                            </div>
+                        </div>
+                        <!-- image1
+                      content1
+
+                      image2
+                      image2 image3
+
+                      image2
+                      content2
+
+                      image3 -->
+
+                        <div id="myModals-xhNLcYgesFPuxGhXtjT2" class="view-mobile modal fade-scale myModals-xhNLcYgesFPuxGhXtjT2" role="dialog" aria-hidden="false">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="close-div">
+                                            <button type="button" class="btn btn-default close"></button>
+                                        </div>
+                                        <h2 class="sub-title text-center">Awards</h2>
+
+                                        <div class="row-img">
+                                            <img src="./img/yamazaki-award-1_mobile.png" class="img-responsive first-img visible-xs" style="width:100%;" alt="Image">
+                                            <img src="./img/yamazaki-award-1.png" class="img-responsive first-img  is-cropped hidden-xs" alt="Image">
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div><p></p></div>
+
+                                                <div style="width: 100%; height: 32px;"></div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-12 row-button">
+                                            <a class="sun-btn-lg " href="/en/global/awards">LEARN MORE</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade tab-layout " id="tab_product_yamazaki_5">
+                    <div class="layout-1col">
+                        <h2 class="tab-title text-center title-tab no-desc">YAMAZAKI MIZUNARA 2017 EDITION</h2>
+
+
+                        <div class="row-image no-mobile-content ">
+                            <a href="/en/global/news/20/detail">
+                                <img src="./img/yamazaki-mizunara-1.png" class="img-responsive hidden-xs hidden-sm" alt="Image">
+                            </a>
+                            <img src="./img/yamazaki-mizunara-1_mobile.png" class="img-responsive section-mobile-reponsive visible-xs visible-sm" alt="Image" data-toggle="modal" data-target="#myModals-15xqBw4WwDLH7wjnRIQU">
+                        </div>
+
+                        <div class="row row-text text-left hidden-xs">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                                <div class="col-md-6 col-lg-6 col-sm-6">
+                                    <p class="text-heading got-content">Yamazaki Mizunara 2017 Edition, taste blessed by the passage of time.</p>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            </div>
+                            <!-- 2 Collumn 2 content -->
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-block-1">
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-right text"><p>The Yamazaki Mizunara 2017 Edition represents Suntory’s true mastery of the Art of Mizunara–from harvesting, to cask making, to maturation, to blending.</p></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-block-2">
+                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 pull-left text"><p>It is made from a precise selection of malt whiskies, all distilled in Yamazaki and aged in Japanese Mizunara casks. The House of Suntory invites whisky lovers to experience one of its most precious creations and encounter for the first time the defining expression of Mizunara’ness.</p></div>
+                                <div class="col-md-3 col-lg-3 col-sm-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="row row-text text-left hidden-md hidden-lg hidden-sm">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <p class="text-center text-more-detail">Yamazaki Mizunara 2017 Edition, taste blessed by the passage of time.</p>
+                            </div>
+                        </div>
+
+                        <div class="row row-link action-group has_content btn-show-popup hidden-lg hidden-md hidden-sm">
+                            <div class="col-md-12">
+                                <a class="sun-btn-lg visible-xs-block hidden" data-toggle="modal" data-target="#myModals-15xqBw4WwDLH7wjnRIQU">More Details</a>
+                            </div>
+                        </div>
+                        <div class="row row-link action-group has_content btn-open-link">
+                            <div class="col-md-12">
+                                <a class="sun-btn-lg " href="/en/global/news/20/detail">READ MORE</a>
+                            </div>
+                        </div>
+                        <!-- image1
+                      content1
+
+                      image2
+                      image2 image3
+
+                      image2
+                      content2
+
+                      image3 -->
+
+                        <div id="myModals-15xqBw4WwDLH7wjnRIQU" class="view-mobile modal fade-scale myModals-15xqBw4WwDLH7wjnRIQU" role="dialog" aria-hidden="false">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="close-div">
+                                            <button type="button" class="btn btn-default close"></button>
+                                        </div>
+                                        <h2 class="sub-title text-center">YAMAZAKI MIZUNARA 2017 EDITION</h2>
+
+                                        <div class="row-img">
+                                            <img src="./img/yamazaki-mizunara-1_mobile.png" class="img-responsive first-img visible-xs" style="width:100%;" alt="Image">
+                                            <img src="./img/yamazaki-mizunara-1.png" class="img-responsive first-img  is-cropped hidden-xs" alt="Image">
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div><p>The Yamazaki Mizunara 2017 Edition represents Suntory’s true mastery of the Art of Mizunara–from harvesting, to cask making, to maturation, to blending.</p></div>
+
+                                                <div class="no-spacing"><p>It is made from a precise selection of malt whiskies, all distilled in Yamazaki and aged in Japanese Mizunara casks. The House of Suntory invites whisky lovers to experience one of its most precious creations and encounter for the first time the defining expression of Mizunara’ness.</p></div>
+
+
+                                                <div style="width: 100%; height: 32px;"></div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-12 row-button">
+                                            <a class="sun-btn-lg " href="/en/global/news/20/detail">READ MORE</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="pager wizard hidden-md hidden-lg" id="wizard-nav">
+                    <li class="sun-btn-flipper flipper-prev previous disabled">
+                    </li>
+                    <li class="sun-btn-flipper flipper-next next">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="session-where-to-find">
+        <a href="/en/global/where-to-find" class="link-normal">
+            <img src="./img/where-to-find.png" class="img-responsive img-rp-center-mobile" alt="Image">
+            <h2>where to find</h2>
+        </a>
+        <h3>FIND A SUNTORY WHISKY STORE NEAR YOU.</h3>
+    </div>
+    <hr>
+    <div class="container text-center export-more">
+        <h2>EXPLORE MORE</h2>
+        <ul class="export-more-list list-thumbnail">
+            <li class="col-xs-12 col-sm-4 col-md-4 col-lg-4 item">
+                <div class="thumbnail">
+                    <a href="/en/global/distilleries" bsi-tag="navMain" data-tag-item="THE DISTILLERIES">
+                        <img data-src="https://whisky.suntory.com/sites/default/files/2018-12/em_dis.png" src="https://whisky.suntory.com/sites/default/files/2018-12/em_dis.png" alt="" class="hidden-xs">
+                        <img data-src="https://whisky.suntory.com/sites/default/files/2019-01/em_dis_mobile_0.jpg" src="https://whisky.suntory.com/sites/default/files/2019-01/em_dis_mobile_0.jpg" alt="" class="visible-xs">
+                        <h3>THE DISTILLERIES</h3>
+                    </a>
+                    <div class="caption">
+                        <p>IN HARMONY WHERE JAPANESE NATURE AND PEOPLE MEET</p>
+
+                    </div>
+                </div>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-4 col-lg-4 item">
+                <div class="thumbnail">
+                    <a href="/en/global/rituals" bsi-tag="navMain" data-tag-item="RITUALS">
+                        <img data-src="https://whisky.suntory.com/sites/default/files/2018-12/em_rituals.png" src="https://whisky.suntory.com/sites/default/files/2018-12/em_rituals.png" alt="" class="hidden-xs">
+                        <img data-src="https://whisky.suntory.com/sites/default/files/2018-12/em_rituals_mobile.png" src="https://whisky.suntory.com/sites/default/files/2018-12/em_rituals_mobile.png" alt="" class="visible-xs">
+                        <h3>RITUALS</h3>
+                    </a>
+                    <div class="caption">
+                        <p>ENJOYING THE JAPANESE WHISKY</p>
+
+                    </div>
+                </div>
+            </li>
+            <li class="col-xs-12 col-sm-4 col-md-4 col-lg-4 item">
+                <div class="thumbnail">
+                    <a href="/en/global/the-house/philosophy" bsi-tag="navMain" data-tag-item="PHILOSOPHY">
+                        <img data-src="https://whisky.suntory.com/sites/default/files/2018-12/em_phil.png" src="https://whisky.suntory.com/sites/default/files/2018-12/em_phil.png" alt="" class="hidden-xs">
+                        <img data-src="https://whisky.suntory.com/sites/default/files/2019-01/em_phil_mobile.jpg" src="https://whisky.suntory.com/sites/default/files/2019-01/em_phil_mobile.jpg" alt="" class="visible-xs">
+                        <h3>PHILOSOPHY</h3>
+                    </a>
+                    <div class="caption">
+                        <p>JAPANESE PHILOSOPHY</p>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="banner-bottom text-center">
+        <img src="./img/product-yamazaki-footer.png" class="img-rp-center" alt="Image" style="width: 100%; margin-left: 0px; max-width: none;">
+    </div>
+    <!-- Export more -->
+    <!-- @include /partials/export-more.html -->
+</section>
+<script src="./js/main.js"></script>
+<script src="./js/scroll-nav.js"></script>
+<script src="./js/tab-processing.js"></script>
+<div class="footer-top p-1"></div>
+<footer id="footer" class="footer-site">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 max-width">
+                <p class="footer-logo1">
+                    <a href="https://house.suntory.com/" target="_blank" class="logo-footer"><img
+                            src="./img/logo-the-house.svg"></a>
+                </p>
+                <div class="navbar">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a href="https://house.suntory.com/">House of suntory</a>
+                        </li>
+                        <li>
+                            <a href="https://whisky.suntory.com/">Suntory whisky</a>
+                        </li>
+                        <li>
+                            <a href="https://www.suntory.co.jp/wnb/rokugin/en/">Roku gin</a>
+                        </li>
+                        <li>
+                            <a href="https://hakuvodka.suntory.com/en/global">Haku Vodka</a>
+                        </li>
+                        <li>
+                            <a href="https://www.beamsuntory.com/">Beam suntory INC</a>
+                        </li>
+                        <li>
+                            <a href="https://www.beamsuntory.com/docs/BeamSuntoryMarketingCode_2015.pdf"
+                               target="_blank">Marketing code</a>
+                        </li>
+                        <li>
+                            <a href="/en/global/about-our-ads">about our ads</a>
+                        </li>
+                        <li>
+                            <a href="/en/global/terms-and-conditions">terms &amp; conditions</a>
+                        </li>
+                        <li>
+                            <a href="/en/global/privacy-policy">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="/en/global/contact-us">contact us</a>
+                        </li>
+                        <li>
+                            <a href="https://house.suntory.com/en/global/faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://www.beamsuntory.com/en/supply-chain-transparency">supply chain
+                                transparency</a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="copyright">©2019 Beam Suntory Import Co., Chicago, IL.</p>
+                <p class="copyright">© 2019 Beam Suntory Inc., 222 W Merchandise Mart Plaza, Chicago, IL 60654. All
+                    Rights Reserved.</p>
+
+                <div class="share-this-page">
+                    <a target="_blank" href="https://www.youtube.com/channel/UC72-oIt37SxC6qDQ5O-hYZQ">
+                        <span class="fa fa-youtube-play"></span>
+                    </a>
+                </div>
+                <div class="share-this-page svg-item">
+                    <a target="_blank" href="http://www.drinksmart.com/" class="drink_smart">
+                        <img src="./img/logo_drink_smart_grey.svg">
+                    </a>
+                    <span>
+            <img src="./img/triman-grey.svg">
+          </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
